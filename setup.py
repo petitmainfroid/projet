@@ -2,7 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 def parse_requirements(filename):
-    """解析依赖文件"""
+
     if os.path.exists(filename):
         with open(filename, 'r') as f:
             return [line.strip() for line in f if line.strip() and not line.strip().startswith("#")]
@@ -15,7 +15,7 @@ def parse_requirements(filename):
             "seaborn>=0.11.0",
         ]
 
-# 加载依赖
+
 requirements = parse_requirements("requirements.txt")
 
 setup(
